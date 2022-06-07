@@ -42,7 +42,7 @@ class ProfileController extends Controller
         $Profile ->start_internship = $request->input('start_internship');
         $Profile ->end_internship = $request->input('end_internship');
         $Profile ->supervisor = $request->input('supervisor');
-
+        dd($Profile);
         $Profile->save();
         return redirect('/profile');
 
