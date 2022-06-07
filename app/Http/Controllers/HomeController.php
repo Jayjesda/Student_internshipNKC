@@ -26,19 +26,19 @@ class HomeController extends Controller
 
     public function index()
     {      
-        $request = DB::table('student_informations')
-        ->where('user_id','=' ,Auth::user()->id);
+        //$request = DB::table('student_informations')
+        //->where('user_id','=' ,Auth::user()->id);
 
-        $profile_count = DB::table('subscriptions')->where('pid_user',$pid_user)->count();
+        $profile_count = DB::table('student_informations')->where('user_id',$user_id)->count();
 
         //check if any subscription plan exists
         if($profile_count == 0)
         { 
-          return view('home');
+          return view('profile_input');
         }
         else
         {
-          return view('profile_input');
+           return view('home');
         }
 
         //dd($request);
