@@ -3,7 +3,7 @@
 @section('content')
 
     
-     <form action="{{ url('profileUpdate') }}" method="POST" action="update" enctype="multipart/form-data">
+     <form action="{{ url('Profile-insert') }}" method="POST" enctype="multipart/form-data">
           @csrf
         
         <!-- Content wrapper -->
@@ -61,7 +61,7 @@
                           </div>
                           <div class="mb-3">
                             <label for="student_id" class="form-label"><font size="3"><b>รหัสประจำตัวนักศึกษา</b> ไม่มีขีด (-)</font></label>
-                            <input class="form-control" value="" type="text" id="student_id" name="studentID" />
+                            <input class="form-control" value="" type="text" id="student_id" name="student_id" />
                           </div>
                           <div class="mb-3">
                             <label for="email" class="form-label"><font size="3"><b>อีเมล</b></font></label>
@@ -70,7 +70,6 @@
                           <div class="mb-3">
                             <label for="level" class="form-label"><font size="3"><b>ระดับ</b></font> </label>
                             <select id="level"   class="select2 form-select"> 
-
                               <option value="">ชั้นปีที่ </option>
                               <option value="1">1</option>
                               <option value="2">2</option>
@@ -212,14 +211,14 @@
                             </div>
                           </div>
 
-                          <div class="mt-2 text-end ">
-                            <button type="submit" class="btn btn-primary me-2">บันทึกข้อมูล</button>
-                          </div>
+                         
                         </div>
                       </div>
                     </div>
                   </div>
-                  
+                   <div class="mt-2 text-end ">
+                            <button type="submit" class="btn btn-primary me-2">บันทึกข้อมูล</button>
+                          </div>
                 </div>
               </div>
             </div>

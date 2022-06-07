@@ -211,15 +211,17 @@
                             </div>
                           </div>
 
-                          <div class="mt-2 text-end ">
-                            <button type="submit" class="btn btn-primary me-2">บันทึกข้อมูล</button>
-                          </div>
+                          
                         </div>
                       </div>
                     </div>
                   </div>
                   
                 </div>
+
+                <div class="mt-2 text-end ">
+                            <button type="submit" class="btn btn-primary me-2">บันทึกข้อมูล</button>
+                          </div>
               </div>
             </div>
             <!-- / Content -->

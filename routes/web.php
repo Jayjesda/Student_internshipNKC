@@ -32,9 +32,12 @@ Route::get('history','JoblogController@history_joblogs');
 //profilecontroller
 
 Route::get('ProfileInput','ProfileController@input_profile');
+Route::post('Profile-insert','ProfileController@insert_profile');
 
 Route::POST('profileUpdate','ProfileController@profile_Update');
 Route::get('profile','ProfileController@show_profile');
+
+
 
 
 

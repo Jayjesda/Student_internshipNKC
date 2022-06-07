@@ -10,9 +10,17 @@ class ProfileController extends Controller
 
     public function input_profile()
     {   
+        
        return view('profile_input');
     }
 
+    public function insert_profile(Request $request)
+    {   
+        
+       
+    }
+
+    
     public function profile_Update($request)
     {   
        
