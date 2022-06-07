@@ -26,17 +26,19 @@ class HomeController extends Controller
 
     public function index()
     {      
-        //$request = DB::table('student_informations')
-        //->where('user_id','=' ,Auth::user()->id);
+        $request = DB::table('student_informations')
+        ->where('user_id','=' ,Auth::user()->id);
 
-        $subscription_count = DB::table('student_informations')->where('pid_user',$pid_user)->count();
+        $profile_count = DB::table('subscriptions')->where('pid_user',$pid_user)->count();
 
         //check if any subscription plan exists
-        if($subscription_count == 0)
+        if($profile_count == 0)
         { 
-          //record does not exist 
-        }else{
-          //record exists 
+          return view('home');
+        }
+        else
+        {
+          return view('profile_input');
         }
 
         //dd($request);
