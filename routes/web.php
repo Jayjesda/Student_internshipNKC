@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JoblogController;
-
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +30,10 @@ Route::get('history','JoblogController@history_joblogs');
 
 
 //profilecontroller
-Route::get('inputprofile','ProfileController@input_profile');
+
+Route::get('ProfileInput','ProfileController@input_profile');
+
+Route::POST('profileUpdate','ProfileController@profile_Update');
 Route::get('profile','ProfileController@show_profile');
 
 

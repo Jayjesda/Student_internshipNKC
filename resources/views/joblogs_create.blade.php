@@ -16,60 +16,91 @@
                 
                  <!-- Basic -->
                 <div class="col-md-12">
+
+                
                   <div class="card mb-4">
                     <h5 class="card-header">บันทึกการฝึกงาน</h5>
-                    <div class="card-body demo-vertical-spacing demo-only-element">
+                    <div class="card-body demo-vertical-spacing demo-only-elemen t"></div>
+
+                    <div class="input-group ">
+                        <span class="input-group-text" id="basic-addon11"><b>ชื่อ</b></span>
+                        <input
+                          type="text"
+                          class="form-control "
+                          placeholder="{{ Auth::user()->name }}"
+                          disabled
+                        />
+                    </div>
+
+                    <div class="input-group ">
+                        <span class="input-group-text" id="basic-addon11"><b>สถานที่ฝึกงาน</b></span>
+                        <input
+                          type="text"
+                          class="form-control "
+                          placeholder="KKU COMPANY / แผนก IT Support /ตำแหน่งนักศึกษาฝึกงาน "
+                          disabled
+                        />
+                    </div>
+
+
                       <div class="input-group ">
-                        <span class="input-group-text" id="basic-addon11">วัน/เดือน/ปี</span>
+                        <span class="input-group-text" id="basic-addon11"><b>วันที่</b></span>
                         <input
                           type="date"
                           class="form-control "
                           placeholder="หัวข้อการฝึกงาน"
-                          aria-describedby="basic-addon11"
+                         
                         />
-
                       </div>
 
-
                       <div class="input-group">
+                         <span class="input-group-text" id="title"><b>หัวข้อการฝึกงาน</b></span>
                         <input
                           type="text"
                           class="form-control"
-                          placeholder="Recipient's username"
-                          aria-label="Recipient's username"
-                          aria-describedby="basic-addon13"
+                          placeholder="หัวข้อการฝึกงานประจำวัน"
+                          aria-label="หัวข้อการฝึกงานประจำวัน"
+                          
                         />
-                        <span class="input-group-text" id="basic-addon13">@example.com</span>
+                       
                       </div>
-
-                     
-
                       <div class="input-group">
-                        <span class="input-group-text" id="basic-addon14">https://example.com/users/</span>
+                         <span class="input-group-text" id="Details"><b>รายละเอียด</b></span>
                         <input
                           type="text"
+                          class="form-control"
+                          placeholder="รายละเอียดการฝึกงานประจำวัน"
+                          aria-label="รายละเอียดการฝึกงานประจำวัน"
+                          aria-describedby="basic-addon13"
+                        />
+                      </div>
+
+                      <div class="input-group">
+                        <span class="input-group-text" id="time_start"><b>เวลาเข้างาน</b></span>
+                        <input
+                          type="time"
                           class="form-control"
                           placeholder="URL"
                           id="basic-url1"
-                          aria-describedby="basic-addon14"
                         />
                       </div>
 
                       <div class="input-group">
-                        <span class="input-group-text">$</span>
+                        <span class="input-group-text" id="time_end"><b>เวลาออกงาน</b></span>
                         <input
-                          type="text"
+                          type="time"
                           class="form-control"
-                          placeholder="Amount"
-                          aria-label="Amount (to the nearest dollar)"
+                          placeholder="URL"
+                          id="basic-url1"
                         />
-                        <span class="input-group-text">.00</span>
                       </div>
+                      <center>
 
-                      <div class="input-group">
-                        <span class="input-group-text">With textarea</span>
-                        <textarea class="form-control" aria-label="With textarea" placeholder="Comment"></textarea>
-                      </div>
+                      <button type="button" class="btn btn-primary ">บันทึกการฝึกงาน</button>
+                      </center>
+                      
+
+                      
                     </div>
                   </div>
                 </div>

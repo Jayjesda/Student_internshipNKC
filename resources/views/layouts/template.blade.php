@@ -147,7 +147,7 @@
 
 
              <li class="menu-item">
-              <a href="home" class="menu-link">
+              <a href="#" class="menu-link">
                <i class="fa-solid fa-square-phone"></i></i>&nbsp;&nbsp;&nbsp;
                 <div data-i18n="Analytics">ติดต่อผู้ดุแลระบบ</div>
               </a>
