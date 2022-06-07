@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class student_informations extends Model
+class Profile extends Model
 {
     use HasFactory;
+    protected $table = 'student_informations';
     protected $fillable = [
         'profile_image',
         'level',

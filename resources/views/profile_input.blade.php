@@ -145,7 +145,7 @@
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="parent_work"><font size="3"><b>อาชีพ</b></font></label>
-                            <select id="parent_ work" class="select2 form-select">
+                            <select id="parent_work" class="select2 form-select">
                               <option value="">อาชีพ : </option>
                               <option value="ข้าราชการ">ข้าราชการ</option>
                               <option value="พนักงานรัฐวิสาหกิจ">พนักงานรัฐวิสาหกิจ</option>
@@ -159,7 +159,7 @@
                           <div class="mb-3">
                             <label class="form-label" for="parent_ relationship"><font size="3"><b>ความสัมพันธ์กับนักศึกษา</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="text" class="form-control" value=""  id="parent_ relationship" name="parent_ relationship" />
+                              <input type="text" class="form-control" value=""  id="parent_relationship" name="parent_ relationship" />
                             </div>          
                           </div>
                           <div class="mb-3">
