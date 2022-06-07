@@ -29,16 +29,15 @@ class HomeController extends Controller
         //$request = DB::table('student_informations')
         //->where('user_id','=' ,Auth::user()->id);
 
-        $profile_count = DB::table('student_informations')->where('user_id',$user_id)->count();
-
-        //check if any subscription plan exists
-        if($profile_count == 0)
+        $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
+        
+        if($profile_count == 1)
         { 
-          return view('profile_input');
+            return view('home');
         }
         else
-        {
-           return view('home');
+        {   
+            return view('profile_input');
         }
 
         //dd($request);
