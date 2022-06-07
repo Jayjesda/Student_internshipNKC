@@ -12,6 +12,7 @@ class joblogController extends Controller
         return view('joblogs_create');
     }
 
+    
     public function history_joblogs()
     {
         return view('joblogs_history');

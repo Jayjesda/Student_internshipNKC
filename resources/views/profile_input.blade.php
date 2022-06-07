@@ -13,7 +13,7 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="card mb-4">
-                    <h5 class="card-header"><font size="5"><b>ประวัตินักศึกษา</b></font></h5>
+                    <h5 class="card-header"><font size="5"><b>ประวัตินักศึกษา </b>(กรอกข้อมูลก่อนการบันทึกการฝึกงาน)</font></h5>
                     
                     <!-- Account -->
                     <div class="card-body">
@@ -65,7 +65,7 @@
                           </div>
                           <div class="mb-3">
                             <label for="email" class="form-label"><font size="3"><b>อีเมล</b></font></label>
-                            <input class="form-control" value="" type="text" id="email" name="email" disabled />
+                            <input class="form-control" value="{{ Auth::user()->email }}" type="text" id="email" name="email" disabled />
                           </div>
                           <div class="mb-3">
                             <label for="level" class="form-label"><font size="3"><b>ระดับ</b></font> </label>

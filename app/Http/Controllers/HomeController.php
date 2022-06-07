@@ -40,8 +40,7 @@ class HomeController extends Controller
             return view('profile_input');
         }
 
-        //dd($request);
-        //return view ('home');
+        
     }
 
     /**
