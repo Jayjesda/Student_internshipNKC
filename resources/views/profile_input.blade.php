@@ -56,7 +56,7 @@
                         <div class="row">
                           
                           <div class="mb-3">
-                            <label for="name" class="form-label"><font size="3"><b>ชื่อ-สกุล</b></font></label>
+                            <label for="name" class="form-label"><font size="3"><b>ชื่อ-สกุล (ระบุคำนำหน้าชื่อ)</b></font></label>
                             <input class="form-control"  type="text" id="name" name="fullname" autofocus  required>
                           </div>
                           <div class="mb-3">

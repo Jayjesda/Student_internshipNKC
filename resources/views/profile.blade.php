@@ -220,7 +220,7 @@
                 </div>
 
                 <div class="mt-2 text-end ">
-                            <button type="submit" class="btn btn-primary me-2">บันทึกข้อมูล</button>
+                            <button type="submit" class="btn btn-primary me-2">อัพเดทข้อมูล</button>
                           </div>
               </div>
             </div>
