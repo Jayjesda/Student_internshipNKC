@@ -21,12 +21,11 @@ class ProfileController extends Controller
     public function insert_profile(Request $request)
     {   
         $Profile = new Profile();
-        //$Profile ->name = $request->input('name');
+        $Profile ->fullname = $request->input('fullname');
+        $Profile ->user_id = Auth()->user()->id;
         $Profile ->student_id = $request->input('student_id');
-        //$Profile ->email = $request->input('email');
         $Profile ->level = $request->input('level');
         $Profile ->major = $request->input('major');
-        $Profile ->faculty = $request->input('faculty');
         $Profile ->birthday = $request->input('birthday');
         $Profile ->age = $request->input('age');
         $Profile ->address = $request->input('address');
@@ -42,27 +41,35 @@ class ProfileController extends Controller
         $Profile ->start_internship = $request->input('start_internship');
         $Profile ->end_internship = $request->input('end_internship');
         $Profile ->supervisor = $request->input('supervisor');
-        dd($Profile);
+        
+        //dd($Profile);
         $Profile->save();
-        return redirect('/profile');
+
+        return redirect('profile');
+        
+        
 
     }
 
     
-    public function profile_Update($request)
-    {   
-       
-    }
+ 
 
 
     public function show_profile()
-    {      
+    {   
+         $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
+        
+        if($profile_count == 1)
+        {   
         $request = DB::table('student_informations')
         ->where('user_id','=',Auth::user()->id)
         
         ->first();
         //  dd($request);
         return view('profile',['request'=>$request]);
+        }else{
+            return view('profile_input');
+        }
         
     }
 }

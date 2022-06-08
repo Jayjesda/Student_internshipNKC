@@ -13,7 +13,6 @@ class Profile extends Model
         'profile_image',
         'level',
         'major',
-        'faculty',
         'birthday',
         'age',
         'address',
@@ -29,6 +28,6 @@ class Profile extends Model
         'start_internship',
         'end_internship',
         'supervisor'
-
+        
     ];
 }

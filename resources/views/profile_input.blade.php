@@ -57,63 +57,37 @@
                           
                           <div class="mb-3">
                             <label for="name" class="form-label"><font size="3"><b>ชื่อ-สกุล</b></font></label>
-                            <input class="form-control" value="" type="text" id="name" name="name" autofocus />
+                            <input class="form-control"  type="text" id="name" name="fullname" autofocus  required>
                           </div>
                           <div class="mb-3">
                             <label for="student_id" class="form-label"><font size="3"><b>รหัสประจำตัวนักศึกษา</b> ไม่มีขีด (-)</font></label>
-                            <input class="form-control" value="" type="text" id="student_id" name="student_id" />
+                            <input class="form-control"  type="text"  name="student_id" />
                           </div>
                           <div class="mb-3">
                             <label for="email" class="form-label"><font size="3"><b>อีเมล</b></font></label>
                             <input class="form-control" value="{{ Auth::user()->email }}" type="text" id="email" name="email" disabled />
                           </div>
                           <div class="mb-3">
-                            <label for="level" class="form-label"><font size="3"><b>ระดับ</b></font> </label>
-                            <select id="level"   class="select2 form-select"> 
-                              <option value="">ชั้นปีที่ </option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                            </select>
+                            <label for="level" class="form-label"><font size="3"><b>ชั้นปี</b></font> </label>
+                           <input type="text" class="form-control" id="level" name="level" />
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="major"><font size="3"><b>สาขา</b></font></label>
-                            <select id="major" class="select2 form-select">
-                               <option value="">สาขา : </option>>
-                              <option value="วิทยาการคอมพิวเตอร์และสารสนเทศ">วิทยาการคอมพิวเตอร์และสารสนเทศ</option>
-                              <option value="วิทยาการข้อมูลและปัญญาประดิษฐ์">วิทยาการข้อมูลและปัญญาประดิษฐ์</option>
-                              <option value="เทคโนโลยีการผลิตสัตว์น้ำ">เทคโนโลยีการผลิตสัตว์น้ำ</option>
-                              <option value="เทคโนโลยีและนวัตกรรมอาหาร">เทคโนโลยีและนวัตกรรมอาหาร</option>
-                              <option value="วิทยาศาสตร์สิ่งแวดล้อมและทรัพยากรธรรมชาติ">วิทยาศาสตร์สิ่งแวดล้อมและทรัพยากรธรรมชาติ</option>
-                              <option value="ววิทยาศาสตร์การกีฬาและการออกกำลังการ">วิทยาศาสตร์การกีฬาและการออกกำลังการ</option>
-                              <option value="การเงินธุรกิจ">การเงินธุรกิจ</option>
-                              <option value="ธุรกิจระหว่างประเทศ">ธุรกิจระหว่างประเทศ</option>
-                              <option value="การท่องเที่ยวและอุตสาหกรรมการบริการ">การท่องเที่ยวและอุตสาหกรรมการบริการ</option>
-                              <option value="บัญชีบัณฑิต">บัญชีบัณฑิต</option>
-                              <option value="เศษฐศาสตร์ธุรกิจและการจัดการ">เศษฐศาสตร์ธุรกิจและการจัดการ</option>
-                              <option value="นิติศาสตร์">นิติศาสตร์</option>
-                              <option value="รัฐประศาสนศาสตร์">รัฐประศาสนศาสตร์</option>
-                              <option value="ภาษาอังกฤษเพื่อการจัดการธุรกิจ">ภาษาอังกฤษเพื่อการจัดการธุรกิจ</option>
-                              <option value="การสอนภาษอังกฤษในฐานะภาษาต่างประเทศ">การสอนภาษอังกฤษในฐานะภาษาต่างประเทศ</option>
-                            </select>
+                            <input type="text" class="form-control" id="major" name="major" />
                           </div>
-                          <div class="mb-3">
-                            <label for="faculty" class="form-label"><font size="3"><b>คณะ</b></font></label>
-                            <input type="text" class="form-control" id="faculty" name="faculty" value="สหวิทยาการ" disabled/>
-                          </div>
+                         
                           <div class="mb-3">
                             <label for="birthday" class="form-label"><font size="3"><b>วันเกิด</b></font></label>
-                            <input type="date" class="form-control" value="" id="birthday" name="birthday" />
+                            <input type="date" class="form-control"  id="birthday" name="birthday" />
                           </div>
                           <div class="mb-3">
                             <label for="age" class="form-label"><font size="3"><b>อายุ</b></font></label>
-                            <input class="form-control" type="text" value="" id="age" name="age"  />
+                            <input class="form-control" type="text"  id="age" name="age"  />
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="address"><font size="3"><b>ที่อยู่</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="text" class="form-control" value="" id="address" name="address" />
+                              <input type="text" class="form-control"  id="address" name="address" />
                             </div>
                           </div>
                           <div class="mb-3">
@@ -137,29 +111,20 @@
                         <div class="card-body">
                           <div class="mb-3">
                             <label for="parent_name" class="form-label"><font size="3"><b>ชื่อ-สกุล</b></font></label>
-                            <input class="form-control" type="text" value="" id="parent_name" name="parent_name" />
+                            <input class="form-control" type="text"   name="parent_name" />
                           </div>
                           <div class="mb-3">
                             <label for="parent_age" class="form-label"><font size="3"><b>อายุ</b></font></label>
-                            <input class="form-control" type="text" value="" id="parent_age" name="parent_age" />
+                            <input class="form-control" type="text"   name="parent_age" />
                           </div>
                           <div class="mb-3">
-                            <label class="form-label" for="parent_work"><font size="3"><b>อาชีพ</b></font></label>
-                            <select id="parent_work" class="select2 form-select">
-                              <option value="">อาชีพ : </option>
-                              <option value="ข้าราชการ">ข้าราชการ</option>
-                              <option value="พนักงานรัฐวิสาหกิจ">พนักงานรัฐวิสาหกิจ</option>
-                              <option value="พนักงานบริษัท">พนักงานบริษัท</option>
-                              <option value="ค้าขาย/ประกอบกิจการส่วนตัว">ค้าขาย/ประกอบกิจการส่วนตัว</option>
-                              <option value="รับจ้างทั่วไป">รับจ้างทั่วไป</option>
-                              <option value="เกษตรกร">เกษตรกร</option>
-                              <option value="ว่างงาน">ว่างงาน</option>
-                            </select>
+                            <label class="form-label" for="parent_work"><font size="3"><b>อาชีพ</b></font></label> 
+                             <input type="text" class="form-control"   name="parent_work" />
                           </div>
                           <div class="mb-3">
-                            <label class="form-label" for="parent_ relationship"><font size="3"><b>ความสัมพันธ์กับนักศึกษา</b></font></label>
+                            <label class="form-label" for="parent_relationship"><font size="3"><b>ความสัมพันธ์กับนักศึกษา</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="text" class="form-control" value=""  id="parent_relationship" name="parent_ relationship" />
+                              <input type="text" class="form-control"  name="parent_relationship" />
                             </div>          
                           </div>
                           <div class="mb-3">
