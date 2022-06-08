@@ -61,7 +61,7 @@
                           </div>
                           <div class="mb-3">
                             <label for="student_id" class="form-label"><font size="3"><b>รหัสประจำตัวนักศึกษา</b> ไม่มีขีด (-)</font></label>
-                            <input class="form-control"  type="text"  name="student_id" />
+                            <input class="form-control"  type="text"  name="student_id" required />
                           </div>
                           <div class="mb-3">
                             <label for="email" class="form-label"><font size="3"><b>อีเมล</b></font></label>
@@ -69,31 +69,31 @@
                           </div>
                           <div class="mb-3">
                             <label for="level" class="form-label"><font size="3"><b>ชั้นปี</b></font> </label>
-                           <input type="text" class="form-control" id="level" name="level" />
+                           <input type="text" class="form-control" id="level" name="level" required />
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="major"><font size="3"><b>สาขา</b></font></label>
-                            <input type="text" class="form-control" id="major" name="major" />
+                            <input type="text" class="form-control" id="major" name="major" required />
                           </div>
                          
                           <div class="mb-3">
                             <label for="birthday" class="form-label"><font size="3"><b>วันเกิด</b></font></label>
-                            <input type="date" class="form-control"  id="birthday" name="birthday" />
+                            <input type="date" class="form-control"  id="birthday" name="birthday" required />
                           </div>
                           <div class="mb-3">
                             <label for="age" class="form-label"><font size="3"><b>อายุ</b></font></label>
-                            <input class="form-control" type="text"  id="age" name="age"  />
+                            <input class="form-control" type="text"  id="age" name="age"  required />
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="address"><font size="3"><b>ที่อยู่</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="text" class="form-control"  id="address" name="address" />
+                              <input type="text" class="form-control"  id="address" name="address" required />
                             </div>
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="telephone"><font size="3"><b>เบอร์โทรศัพท์</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="text" class="form-control" value="" id="telephone" name="telephone"  />
+                              <input type="text" class="form-control" value="" id="telephone" name="telephone" required />
                             </div>
                           </div>
                         </div>
@@ -151,28 +151,28 @@
                         <div class="card-body">
                           <div class="mb-3">
                             <label for="position" class="form-label"><font size="3"><b>ฝึกงานตำแหน่ง</b></font></label>
-                            <input class="form-control" type="text" value="" name="position_work"  id="position" name="position" />
+                            <input class="form-control" type="text" value="" name="position_work"  id="position" name="position" required />
                           </div>
                           <div class="mb-3">
                             <label for="address_work" class="form-label"><font size="3"><b>สถานที่ฝึกงาน</b></font></label>
-                            <input class="form-control" type="text" value="" id="address_work" name="address_work" />
+                            <input class="form-control" type="text" value="" id="address_work" name="address_work" required />
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="start_internship"><font size="3"><b>เริ่มฝึกงาน</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="date" class="form-control" value="" id="start_internship" name="start_internship" />
+                              <input type="date" class="form-control" value="" id="start_internship" name="start_internship" required />
                             </div>
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="end_internship"><font size="3"><b>สิ้นสุดการฝึกงาน</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="date" class="form-control"  value="" id="end_internship" name="end_internship" />
+                              <input type="date" class="form-control"  value="" id="end_internship" name="end_internship"  required/>
                             </div>
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="supervisor"><font size="3"><b>ผู้ควบคุมการฝึกงาน</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="text" class="form-control" value="" id="supervisor" name="supervisor" />
+                              <input type="text" class="form-control" value="" id="supervisor" name="supervisor" required />
                             </div>
                           </div>
 
