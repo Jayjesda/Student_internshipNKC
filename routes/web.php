@@ -30,13 +30,14 @@ Route::get('history','JoblogController@history_joblogs');
 
 
 //profilecontroller
-
-Route::get('ProfileInput','ProfileController@input_profile');
+Route::put('Profile-update','ProfileController@update_profile');
 Route::post('Profile-insert','ProfileController@insert_profile');
-Route::get('ProfileUpdate','ProfileController@profile_Update');
-
-Route::POST('profileUpdate','ProfileController@profile_Update');
 Route::get('profile','ProfileController@show_profile');
+
+
+
+
+
 
 
 

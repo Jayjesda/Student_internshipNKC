@@ -2,9 +2,8 @@
 
 @section('content')
 
-     <form action="{{ url('profileUpdate') }}" method="POST" action="update" enctype="multipart/form-data">
+     <form action="{{ url('Profile-update') }}"  method="PUT"  enctype="multipart/form-data">
           @csrf
-        <input type="hidden" name="id" value="{{Auth::user()->id}}"
         <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
@@ -56,7 +55,7 @@
                           
                           <div class="mb-3">
                             <label for="name" class="form-label"><font size="3"><b>ชื่อ-สกุล</b></font></label>
-                            <input class="form-control" value="{{ Auth::user()->name }}" type="text" id="name" name="name" autofocus />
+                            <input class="form-control" value="{{ $request->fullname }}" type="text" id="name" name="name" autofocus />
                           </div>
                           <div class="mb-3">
                             <label for="student_id" class="form-label"><font size="3"><b>รหัสประจำตัวนักศึกษา</b> ไม่มีขีด (-)</font></label>
@@ -67,36 +66,12 @@
                             <input class="form-control" value="{{ Auth::user()->email }}" type="text" id="email" name="email" disabled />
                           </div>
                           <div class="mb-3">
-                            <label for="level" class="form-label"><font size="3"><b>ระดับ</b></font> </label>
-                            <select id="level"   class="select2 form-select"> 
-
-                              <option value="">ชั้นปีที่ {{ $request->level }}</option>
-                              <option value="1">1</option>
-                              <option value="2">2</option>
-                              <option value="3">3</option>
-                              <option value="4">4</option>
-                            </select>
+                            <label for="level" class="form-label"><font size="3"><b>ระดับ</b></font> </label>  
+                            <input class="form-control" value="{{ $request->level }}" type="text" id="level" name="level" />
                           </div>
                           <div class="mb-3">
-                            <label class="form-label" for="major"><font size="3"><b>สาขา</b></font></label>
-                            <select id="major" class="select2 form-select">
-                               <option value="">สาขา : {{ $request->major }}</option>>
-                              <option value="วิทยาการคอมพิวเตอร์และสารสนเทศ">วิทยาการคอมพิวเตอร์และสารสนเทศ</option>
-                              <option value="วิทยาการข้อมูลและปัญญาประดิษฐ์">วิทยาการข้อมูลและปัญญาประดิษฐ์</option>
-                              <option value="เทคโนโลยีการผลิตสัตว์น้ำ">เทคโนโลยีการผลิตสัตว์น้ำ</option>
-                              <option value="เทคโนโลยีและนวัตกรรมอาหาร">เทคโนโลยีและนวัตกรรมอาหาร</option>
-                              <option value="วิทยาศาสตร์สิ่งแวดล้อมและทรัพยากรธรรมชาติ">วิทยาศาสตร์สิ่งแวดล้อมและทรัพยากรธรรมชาติ</option>
-                              <option value="ววิทยาศาสตร์การกีฬาและการออกกำลังการ">วิทยาศาสตร์การกีฬาและการออกกำลังการ</option>
-                              <option value="การเงินธุรกิจ">การเงินธุรกิจ</option>
-                              <option value="ธุรกิจระหว่างประเทศ">ธุรกิจระหว่างประเทศ</option>
-                              <option value="การท่องเที่ยวและอุตสาหกรรมการบริการ">การท่องเที่ยวและอุตสาหกรรมการบริการ</option>
-                              <option value="บัญชีบัณฑิต">บัญชีบัณฑิต</option>
-                              <option value="เศษฐศาสตร์ธุรกิจและการจัดการ">เศษฐศาสตร์ธุรกิจและการจัดการ</option>
-                              <option value="นิติศาสตร์">นิติศาสตร์</option>
-                              <option value="รัฐประศาสนศาสตร์">รัฐประศาสนศาสตร์</option>
-                              <option value="ภาษาอังกฤษเพื่อการจัดการธุรกิจ">ภาษาอังกฤษเพื่อการจัดการธุรกิจ</option>
-                              <option value="การสอนภาษอังกฤษในฐานะภาษาต่างประเทศ">การสอนภาษอังกฤษในฐานะภาษาต่างประเทศ</option>
-                            </select>
+                            <label class="form-label" for="major"><font size="3"><b>สาขา</b></font></label> 
+                            <input class="form-control" value="{{ $request->major }}" type="text" id="major" name="major" />
                           </div>
                           <div class="mb-3">
                             <label for="faculty" class="form-label"><font size="3"><b>คณะ</b></font></label>
@@ -145,16 +120,7 @@
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="parent_work"><font size="3"><b>อาชีพ</b></font></label>
-                            <select id="parent_ work" class="select2 form-select">
-                              <option value="">อาชีพ : {{ $request->parent_work }}</option>
-                              <option value="ข้าราชการ">ข้าราชการ</option>
-                              <option value="พนักงานรัฐวิสาหกิจ">พนักงานรัฐวิสาหกิจ</option>
-                              <option value="พนักงานบริษัท">พนักงานบริษัท</option>
-                              <option value="ค้าขาย/ประกอบกิจการส่วนตัว">ค้าขาย/ประกอบกิจการส่วนตัว</option>
-                              <option value="รับจ้างทั่วไป">รับจ้างทั่วไป</option>
-                              <option value="เกษตรกร">เกษตรกร</option>
-                              <option value="ว่างงาน">ว่างงาน</option>
-                            </select>
+                             <input class="form-control" type="text" value="{{ $request->parent_work }}" id="parent_w" name="parent_age" />
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="parent_ relationship"><font size="3"><b>ความสัมพันธ์กับนักศึกษา</b></font></label>
