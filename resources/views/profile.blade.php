@@ -2,7 +2,7 @@
 
 @section('content')
 
-     <form action="{{ url('Profile-update') }}"  method="PUT"  enctype="multipart/form-data">
+     <form action="{{ url('Profile-update') }}"  method="post"  enctype="multipart/form-data">
           @csrf
         <!-- Content wrapper -->
           <div class="content-wrapper">
