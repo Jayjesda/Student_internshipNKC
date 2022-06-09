@@ -11,7 +11,7 @@ class joblogController extends Controller
 {
     
 
-    public function show_joblogs()
+    public function show_joblog()
     {   
         $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
        
@@ -32,7 +32,7 @@ class joblogController extends Controller
     }
 
     
-    public function pagehistory_joblogs()
+    public function history_joblogs()
     {   
         $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
        
@@ -51,20 +51,20 @@ class joblogController extends Controller
         
     }
 
-    public function insert_joblogs(Request $request)
+    public function insert_joblog(Request $request)
     {
         $Joblog = new Joblog();
         $Joblog ->user_id = Auth()->user()->id;
         $Joblog ->Date = $request->input('Date');
         $Joblog ->Title = $request->input('Title');
-        $Joblog ->Deatails = $request->input('Deatails');
+        $Joblog ->Details = $request->input('Details');
         $Joblog ->Time_start = $request->input('Time_start');
         $Joblog ->Time_end = $request->input('Time_end');
         //$Joblog ->images = $request->input('images');
         $Joblog ->approved_status = 0;
 
         $Joblog ->save();
-        return redirect('joblogs_create');  
+        return redirect('joblog-history');  
     }
     
 }

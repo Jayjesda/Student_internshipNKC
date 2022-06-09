@@ -17,6 +17,6 @@ class Joblog extends Model
         'Time_start',
         'Time_end',
         'approved_status',
-        'images'
+        //'images'
     ];
 }

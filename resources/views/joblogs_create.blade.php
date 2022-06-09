@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <form action="{{ url('insert_joblogs') }}" method="POST" enctype="multipart/form-data">
+  <form action="{{ url('joblog-insert') }}" method="POST" enctype="multipart/form-data">
           @csrf
           
       <!-- Content wrapper -->
@@ -24,7 +24,7 @@
                       <div class="mb-3 row">
                         <label for="html5-text-input" class="col-md-2 col-form-label"><font color="#212F3C" size="3px"><b>ชื่อ</b></font></label>
                         <div class="col-md-10">
-                          <input class="form-control" type="text" placeholder="นายทดสอบ การบันทึก" id="html5-text-input" disabled />
+                          <input class="form-control" type="text" placeholder="{{ $request->fullname }}" id="html5-text-input" disabled />
                         </div>
                       </div>
 
@@ -52,13 +52,7 @@
                       <div class="row mb-3">
                           <label class="col-sm-2 col-form-label" for="basic-default-message"><font color="#212F3C" size="3px"><b>รายละเอียด</b></font></label>
                           <div class="col-sm-10">
-                            <textarea
-
-                              type="text"
-                              class="form-control"
-                              placeholder="รายละเอียดการฝึกงานประจำวัน"
-                              name="Deatails" required 
-                            ></textarea>
+                            <input class="form-control" type="text" placeholder="รายละเอียดการฝึก"  name="Details" required />
                           </div>
                         </div>
 

@@ -22,7 +22,7 @@
                     
                     <!-- Bootstrap Table with Header - Light -->
               <div class="card">
-                <h5 class="card-header">บันทึกการฝึกงาน  : </h5>
+                <h5 class="card-header">บันทึกการฝึกงาน  :  {{ $request->fullname }} </h5>
                 <div class="table-responsive text-nowrap">
                   <table class="table">
                     <thead class="table-light">
@@ -34,9 +34,10 @@
                         <th>Actions</th>
                       </tr>
                     </thead>
+
                     <tbody class="table-border-bottom-0">
                       <tr>
-                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>55</strong></td>
                         <td>Albert Cook</td>
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
@@ -69,7 +70,7 @@
                             </li>
                           </ul>
                         </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                        <td><span class="badge bg-label-primary me-1">กำลังดำเนินการ</span></td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -120,7 +121,7 @@
                             </li>
                           </ul>
                         </td>
-                        <td><span class="badge bg-label-success me-1">Completed</span></td>
+                        <td><span class="badge bg-label-primary me-1">กำลังดำเนินการ</span></td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -171,7 +172,7 @@
                             </li>
                           </ul>
                         </td>
-                        <td><span class="badge bg-label-info me-1">Scheduled</span></td>
+                        <td><span class="badge bg-label-primary me-1">กำลังดำเนินการ</span></td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -224,7 +225,7 @@
                             </li>
                           </ul>
                         </td>
-                        <td><span class="badge bg-label-warning me-1">Pending</span></td>
+                        <td><span class="badge bg-label-warning me-1">อนุมัติ</span></td>
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">

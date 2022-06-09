@@ -26,8 +26,9 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 
 //joblogcontroller
 
-Route::get('joblog','JoblogController@show_joblogs');
-Route::get('joblog-history','JoblogController@pagehistory_joblogs');
+Route::get('joblog','JoblogController@show_joblog');  //โชว์หน้าเพิ่มข้อมูลการฝึก
+Route::post('joblog-insert','JoblogController@insert_joblog'); //เพิ่มข้อมูลการฝึกงาน
+Route::get('joblog-history','JoblogController@history_joblogs'); //แสดงประวัติการบันทึกและแก้ไข
 
 
 //profilecontroller
