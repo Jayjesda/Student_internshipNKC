@@ -16,7 +16,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('อีเมล') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="email" type="email"  placeholder="KKU MAIL เท่านั้น" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -27,10 +27,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('รหัสผ่าน') }}</label>
+                            <label for="password" class="col-md-4 col-form-label text-md-end " >{{ __('รหัสผ่าน ') }} </label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="password" type="password"  placeholder="รหัสผ่านขั้นต่ำ 8 ตัว" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -41,10 +41,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('ยืนยันรหัสผ่าน') }}</label>
+                            <label for="password-confirm"  class="col-md-4 col-form-label text-md-end">{{ __('ยืนยันรหัสผ่าน') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="password-confirm" type="password"  placeholder="ยืนยันรหัสผ่าน" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
 
@@ -64,7 +64,6 @@
                                         @csrf
                              </form>
                         </a>
-                                   
                     </form>
                 </div>
             </div>
