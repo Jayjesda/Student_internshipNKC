@@ -62,8 +62,8 @@ class joblogController extends Controller
         $Joblog ->Time_end = $request->input('Time_end');
         //$Joblog ->images = $request->input('images');
         $Joblog ->approved_status = 0;
-
         $Joblog ->save();
+        
         return redirect('joblog-history');  
     }
     
