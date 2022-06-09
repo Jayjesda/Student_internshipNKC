@@ -9,12 +9,13 @@ class Joblog extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'user_id',
         'Date',
         'Title',
         'Details',
         'Time_start',
         'Time_end',
         'approved_status',
-        'image'
+        'images'
     ];
 }

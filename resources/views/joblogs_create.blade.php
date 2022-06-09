@@ -9,15 +9,29 @@
               <div class="row">
                 <div class="col-lg-12 mb-4 order-0">
                   <div class="card">
-                        
                   <img src="../assets/img/imges/bginernship.png" class="img-fluid" alt="Responsive image">
                   </div>
                 </div>
                 
                 <!-- HTML5 Inputs -->
                   <div class="card mb-4">
-                    <h5 class="card-header">บันทึกการฝึกงาน : </h5>
+                    <h5 class="card-header"><font color="#E67E22" size="4px"><b>INTERNSHIP RECORD : บันทึกการฝึกงานประจำวัน</b></font></h5>
                     <div class="card-body">
+
+                      <div class="mb-3 row">
+                        <label for="html5-text-input" class="col-md-2 col-form-label"><font color="#212F3C" size="3px"><b>ชื่อ</b></font></label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="text" placeholder="นายทดสอบ การบันทึก" id="html5-text-input" disabled />
+                        </div>
+                      </div>
+
+                      <div class="mb-3 row">
+                        <label for="html5-text-input" class="col-md-2 col-form-label"><font color="#212F3C" size="3px"><b>สถานที่ฝึกงาน</b></font></label>
+                        <div class="col-md-10">
+                          <input class="form-control" type="text" placeholder="บริษัท KKU UNIVERSITY / แผนก เทคโนโลยีสารสนเทศ / ตำแหน่งนักศึกษาฝึกงาน" id="html5-text-input" disabled />
+                        </div>
+                      </div>
+
                       <div class="mb-4 row">
                         <label for="html5-date-input" class="col-md-2 col-form-label"><font color="#212F3C" size="3px"> <b>วันที่</b></font></label>
                         <div class="col-md-10">
@@ -68,30 +82,15 @@
                       <center> <button type="submit" class="btn btn-primary">บันทึกข้อมูล</button></center>
                     </div>
                   </div>
-                
                 </div>
-                
-
               </div>
               <div class="row">
-                
-               
-                  
-                </div>
-                <!--/ Transactions -->
-              </div>
             </div>
-            <!-- / Content -->
-
-            <div class="content-backdrop fade"></div>
           </div>
-          <!-- Content wrapper -->
         </div>
-        <!-- / Layout page -->
-      </div>
-
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
-    </div>
-    <!-- / Layout wrapper -->
+     </div>
+  </div>
+ </div>
+</div>
+  
 @endsection
