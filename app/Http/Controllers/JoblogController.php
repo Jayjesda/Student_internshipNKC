@@ -2,20 +2,69 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use DB;
+use Auth;
+use App\Models\Joblog;
 
 
 class joblogController extends Controller
 {
-    public function create_joblogs()
+    
+
+    public function show_joblogs()
     {   
+        $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
+       
+        if($profile_count == 1)
+        {   
+        $request = DB::table('student_informations')
+        ->where('user_id','=',Auth::user()->id)
+        ->first();
         
-        return view('joblogs_create');
+        //dd($request);
+        return view('joblogs_create',['request'=>$request]);
+        }
+        else
+        {
+            return view('profile_input');
+        }
+       
     }
 
     
-    public function history_joblogs()
+    public function pagehistory_joblogs()
+    {   
+        $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
+       
+        if($profile_count == 1)
+        {   
+        $request = DB::table('student_informations')
+        ->where('user_id','=',Auth::user()->id)
+        ->first();
+        
+        return view('joblogs_history',['request'=>$request]);
+        }
+        else
+        {
+            return view('profile_input');
+        }
+        
+    }
+
+    public function insert_joblogs(Request $request)
     {
-        return view('joblogs_history');
+        $Joblog = new Joblog();
+        $Joblog ->user_id = Auth()->user()->id;
+        $Joblog ->Date = $request->input('Date');
+        $Joblog ->Title = $request->input('Title');
+        $Joblog ->Deatails = $request->input('Deatails');
+        $Joblog ->Time_start = $request->input('Time_start');
+        $Joblog ->Time_end = $request->input('Time_end');
+        //$Joblog ->images = $request->input('images');
+        $Joblog ->approved_status = 0;
+
+        $Joblog ->save();
+        return redirect('joblogs_create');  
     }
     
 }

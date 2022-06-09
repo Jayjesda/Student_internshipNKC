@@ -25,15 +25,16 @@ Route::get('admin/home', [HomeController::class, 'adminHome'])->name('admin.home
 
 
 //joblogcontroller
-Route::get('create','JoblogController@create_joblogs');
-Route::get('history','JoblogController@history_joblogs');
+
+Route::get('joblog','JoblogController@show_joblogs');
+Route::get('joblog-history','JoblogController@pagehistory_joblogs');
 
 
 //profilecontroller
-Route::put('Profile-update/{id}','ProfileController@update_profile');
-Route::post('Profile-insert','ProfileController@insert_profile');
-Route::get('profile','ProfileController@show_profile');
 
+Route::get('profile','ProfileController@show_profile');
+Route::post('Profile-insert','ProfileController@insert_profile');
+Route::put('Profile-update/{id}','ProfileController@update_profile');
 
 
 

@@ -37,14 +37,13 @@ class ProfileController extends Controller
         
         //dd($Profile);
         $Profile->save();
-
         return redirect('profile');  
     }
 
 
     public function show_profile()
     {   
-         $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
+        $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
        
         if($profile_count == 1)
         {   

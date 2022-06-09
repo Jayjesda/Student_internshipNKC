@@ -132,14 +132,14 @@
             </li>
 
             <li class="menu-item">
-              <a href="create" class="menu-link">
+              <a href="joblog" class="menu-link">
                <i class="fa-solid fa-book"></i>&nbsp;&nbsp;&nbsp;
                 <div data-i18n="Analytics">บันทึกข้อมูลการฝึกงาน</div>
               </a>
             </li>
 
             <li class="menu-item">
-              <a href="history" class="menu-link">
+              <a href="joblog-history" class="menu-link">
                <i class="fa-solid fa-clock-rotate-left"></i></i>&nbsp;&nbsp;&nbsp;
                 <div data-i18n="Analytics">ประวัติการบันทึการฝึกงาน</div>
               </a>

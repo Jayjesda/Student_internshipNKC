@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Joblog extends Model
 {
     use HasFactory;
+    protected $table = 'joblogs';
     protected $fillable = [
         'user_id',
         'Date',
