@@ -67,7 +67,7 @@
                             <input class="form-control" value="{{ Auth::user()->email }}" type="text" id="email" name="email" disabled />
                           </div>
                           <div class="mb-3">
-                            <label for="level" class="form-label"><font size="3"><b>ระดับ</b></font> </label>  
+                            <label for="level" class="form-label"><font size="3"><b>ชั้นปี</b></font> </label>  
                             <input class="form-control" value="{{ $request->level }}" type="text" id="level" name="level" />
                           </div>
                           <div class="mb-3">
