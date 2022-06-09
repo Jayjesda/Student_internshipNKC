@@ -2,8 +2,9 @@
 
 @section('content')
 
-     <form action="{{ url('Profile-update') }}"  method="post"  enctype="multipart/form-data">
+     <form action="/Profile-update/{{ $request->id }}" method="post"   enctype="multipart/form-data">
           @csrf
+          @method('put')
         <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
@@ -55,11 +56,11 @@
                           
                           <div class="mb-3">
                             <label for="name" class="form-label"><font size="3"><b>ชื่อ-สกุล</b></font></label>
-                            <input class="form-control" value="{{ $request->fullname }}" type="text" id="name" name="name" autofocus />
+                            <input class="form-control" value="{{ $request->fullname }}" type="text" id="fullname" name="fullname" autofocus />
                           </div>
                           <div class="mb-3">
-                            <label for="student_id" class="form-label"><font size="3"><b>รหัสประจำตัวนักศึกษา</b> ไม่มีขีด (-)</font></label>
-                            <input class="form-control" value="{{ $request->student_id }}" type="text" id="student_id" name="studentID" />
+                            <label for="student_id" class="form-label"><font size="3"><b>รหัสประจำตัวนักศึกษา</b></font></label>
+                            <input class="form-control" value="{{ $request->student_id }}" type="text" id="student_id"  name="student_id" />
                           </div>
                           <div class="mb-3">
                             <label for="email" class="form-label"><font size="3"><b>อีเมล</b></font></label>
@@ -120,12 +121,12 @@
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="parent_work"><font size="3"><b>อาชีพ</b></font></label>
-                             <input class="form-control" type="text" value="{{ $request->parent_work }}" id="parent_w" name="parent_age" />
+                             <input class="form-control" type="text" value="{{ $request->parent_work }}" id="parent_w" name="parent_work" />
                           </div>
                           <div class="mb-3">
                             <label class="form-label" for="parent_ relationship"><font size="3"><b>ความสัมพันธ์กับนักศึกษา</b></font></label>
                             <div class="input-group input-group-merge">
-                              <input type="text" class="form-control" value="{{ $request->parent_relationship }}"  id="parent_ relationship" name="parent_ relationship" />
+                              <input type="text" class="form-control" value="{{ $request->parent_relationship }}"  id="parent_relationship" name="parent_relationship" />
                             </div>          
                           </div>
                           <div class="mb-3">

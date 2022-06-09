@@ -11,7 +11,8 @@ class Profile extends Model
     protected $table = 'student_informations';
     protected $fillable = [
         'profile_image',
-        'name',
+        'fullname',
+        'student_id',
         'level',
         'major',
         'birthday',
