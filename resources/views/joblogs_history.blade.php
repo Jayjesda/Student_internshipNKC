@@ -39,16 +39,31 @@
                     </thead>
 
                     
-                   
+                    
                     <tbody class="table-border-bottom-0">
                    
- 
-                        <td>
-                          <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i></a>
-                          <td><a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i></td> 
-                        </td>
+                    <tr>
+                      <td>
+                          {{ $result->Date }}
+                      </td>
+                      <td>
+                        {{ $result->Title }}
+                      </td>
+                      <td>
+                        {{ $result->Details }}
+                      </td>
+
+                      <td>
+                        {{ $result->approved_status }}
+                      </td>
+
+
+
+                    </tr>
+
                         
-                      </tr>
+                        
+                      
 
                  
 

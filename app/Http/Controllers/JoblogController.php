@@ -14,25 +14,27 @@ class joblogController extends Controller
     public function show_joblog()
     {   
         $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
-       
         if($profile_count == 1)
         {   
         $request = DB::table('student_informations')
         ->where('user_id','=',Auth::user()->id)
         ->first();
-        
-        //dd($request);
+            
         return view('joblogs_create',['request'=>$request]);
         }
         else
         {
             return view('profile_input');
         }
+
+
+        
        
     }
 
     public function history_joblogs()
     {   
+
         $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
         if($profile_count == 1)
         {   
@@ -40,17 +42,17 @@ class joblogController extends Controller
         ->where('user_id','=',Auth::user()->id)
         ->first();
         
-        return view('joblogs_history',['request'=>$request]);
+        $result = DB::table('joblogs')
+        ->where('user_id','=',Auth::user()->id)
+        ->first();
+
+        return view('joblogs_history',['request'=>$request],['result'=>$result]);
         }
         else
         {
             return view('profile_input');
         }
         
-   
-        $results = DB::select('select * from joblogs where id = :id', ['id' => 1]);
-        return view('joblogs_history',['joblogs'=>$results]);
-
 
     }
 
@@ -70,11 +72,7 @@ class joblogController extends Controller
         return redirect('joblog-history');  
     }
     
-    public function showdatahisory_joblog(Request $request)
-    {
-       
-    }
-    
+   
    
 }
 
