@@ -31,11 +31,9 @@ class joblogController extends Controller
        
     }
 
-    
     public function history_joblogs()
     {   
         $profile_count = DB::table('student_informations')->where('user_id','=' ,Auth::user()->id)->count();
-       
         if($profile_count == 1)
         {   
         $request = DB::table('student_informations')
@@ -49,6 +47,9 @@ class joblogController extends Controller
             return view('profile_input');
         }
         
+
+        $data = Joblog::all();
+        return view('joblogs_history',['joblogs'=>$data]);
     }
 
     public function insert_joblog(Request $request)
@@ -67,6 +68,12 @@ class joblogController extends Controller
         return redirect('joblog-history');  
     }
     
+    public function showdatahisory_joblog(Request $request)
+    {
+       
+    }
+    
+   
 }
 
 

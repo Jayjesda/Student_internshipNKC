@@ -30,15 +30,20 @@
                   <table class="table">
                     <thead class="table-light">
                       <tr>
-                        <th><i class="fa-solid fa-calendar-check"></i>&nbsp; <font color="#4D3B3B" size="2px"><b>วัน/เดือน/ปี</b></th>
-                        <th><i class="fa-solid fa-book"></i>&nbsp; <font color="#4D3B3B" size="2px"><b>หัวข้อการบันทึกประจำวัน</b></th>
-                        <th><i class="fa-solid fa-circle-info"></i>&nbsp;<font color="#4D3B3B" size="2px"><b>รายละเอียด</b></th>
-                        <th><i class="fa-solid fa-circle"></i>&nbsp;<font color="#4D3B3B" size="2px"><b>สถานะการบันทึก</b></th>
-                        <th><i class="fa-solid fa-location-arrow"></i>&nbsp;<font color="#4D3B3B" size="2px"><b>จัดการข้อมูล</b></th>
+                        <th><i class="fa-solid fa-calendar-check"></i>&nbsp; <font color="#4D3B3B" size="3px"><b>วัน/เดือน/ปี</b></th>
+                        <th><i class="fa-solid fa-book"></i>&nbsp; <font color="#4D3B3B" size="3px"><b>หัวข้อการบันทึกประจำวัน</b></th>
+                        <th><i class="fa-solid fa-circle-info"></i>&nbsp;<font color="#4D3B3B" size="3px"><b>รายละเอียด</b></th>
+                        <th><i class="fa-solid fa-circle"></i>&nbsp;<font color="#4D3B3B" size="3px"><b>สถานะการบันทึก</b></th>
+                        <th><i class="fa-solid fa-location-arrow"></i>&nbsp;<font color="#4D3B3B" size="3px"><b>จัดการข้อมูล</b></th>
                       </tr>
                     </thead>
 
                     <tbody class="table-border-bottom-0">
+                      
+                      @foreach ($joblogs as $data)
+
+
+                      @endforeach
                       <tr>
                         <td> 11/05/2565</td>
                         <td>จัดทำ UX/UI </td>
