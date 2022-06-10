@@ -38,19 +38,11 @@
                       </tr>
                     </thead>
 
+                    
+                   
                     <tbody class="table-border-bottom-0">
-                      
-                      @foreach ($joblogs as $data)
-
-
-                      @endforeach
-                      <tr>
-                        <td> 11/05/2565</td>
-                        <td>จัดทำ UX/UI </td>
-                        <td> ทำ UX ต่อจากวันที่ 10/05/2565 เสร็จ</td>
-                        <td>
-                          <span class="badge bg-label-success me-1">อนุมัติ</span>
-                        </td>
+                   
+ 
                         <td>
                           <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i></a>
                           <td><a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i></td> 
@@ -58,22 +50,8 @@
                         
                       </tr>
 
-                       <tr>
-                        <td> 11/05/2565</td>
-                        <td>จัดทำ UX/UI </td>
-                        <td> ทำ UX ต่อจากวันที่ 10/05/2565 เสร็จ</td>
-                        <td>
-                          <span class="badge bg-label-primary me-1">กำลังดำเนินการ</span>
-                        </td>
-                        <td>
-                          <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i></a>
-                          <td><a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i></td> 
-                        </td>
-                        
-                      </tr>
-                      
-                      
-                      
+                 
+
                     </tbody>
                   </table>
                 </div>

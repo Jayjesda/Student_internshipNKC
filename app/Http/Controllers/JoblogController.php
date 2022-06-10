@@ -47,9 +47,11 @@ class joblogController extends Controller
             return view('profile_input');
         }
         
+   
+        $results = DB::select('select * from joblogs where id = :id', ['id' => 1]);
+        return view('joblogs_history',['joblogs'=>$results]);
 
-        $data = Joblog::all();
-        return view('joblogs_history',['joblogs'=>$data]);
+
     }
 
     public function insert_joblog(Request $request)
